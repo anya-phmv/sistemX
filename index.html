@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Система икс — Личный кабинет селлера и платформа услуг</title>
+  <meta name="description" content="Современный личный кабинет селлера маркетплейсов: каталог услуг, чат по заявкам, бонусы и единая аналитика Система икс.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN with customized Система икс Brand Theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#f5f4ff',
+              100: '#ebe9fe',
+              200: '#dcd7fe',
+              300: '#c2b8fe',
+              400: '#9f8cfd',
+              500: '#8061f9',
+              600: '#6057ff', // Система икс signature indigo
+              700: '#4a3ee6',
+              800: '#3b32c0',
+              900: '#2c2598',
+              950: '#1b1765',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Local Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full text-slate-900 bg-slate-50 antialiased selection:bg-primary-100 selection:text-primary-900">
+
+  <!-- Application Mount Node -->
+  <div id="app-root"></div>
+
+  <!-- Modal Dialogs Layer -->
+  <div id="modal-root"></div>
+
+  <!-- Toast Notifications Layer (Bottom-Right) -->
+  <div id="toast-root" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none *:pointer-events-auto"></div>
+
+  <!-- Application Engine Script -->
+  <script src="app.js"></script>
+</body>
+</html>
